@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Cattle extends Model
+{
+    use HasFactory;
+
+    public function pasture()
+    {
+        return $this->belongsTo(Pasture::class,'pasture_id','id');
+    }
+}
